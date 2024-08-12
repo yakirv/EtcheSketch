@@ -4,7 +4,7 @@ function changeStyle()
 
 {
 contianerEl.style.border = '2px solid black';
-for (let i =1; i <= 4; i++)
+for (let i =1; i <= 30; i++)
 {
     const  sqaureRawDiv= document.createElement("div");
     sqaureRawDiv.setAttribute("id", "row")
@@ -13,8 +13,9 @@ for (let i =1; i <= 4; i++)
     sqaureRawDiv.style.height = '100%'; 
     sqaureRawDiv.style.display = 'flex';
     sqaureRawDiv.style.flexDirection = "column";
-    for (let c =1; c <= 4; c++)
+    for (let c =1; c <= 30; c++)
         {
+            
         const  sqaureColomnDiv= document.createElement("div");
         sqaureColomnDiv.setAttribute("id", `column_r${i}_c${c}`)
         sqaureColomnDiv.style.border = '2px solid black';
@@ -33,7 +34,7 @@ for (let i =1; i <= 4; i++)
 }
 
 function getSquareId()
-{const squares = document.querySelectorAll("[id ^=column_r]");
+{const squares = document.querySelectorAll("[id ^=column_]");
 squares.forEach((square) => {
     let squareId = square.id;
     square.addEventListener("mouseover", ()=>
